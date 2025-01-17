@@ -1,11 +1,24 @@
-module.exports = {
-    'strapi-neon-tech-db-branches': {
-      enabled: true,
-      config: {
-        neonApiKey: process.env.NEON_API_KEY, 
-        neonProjectName: process.env.NEON_PROJECT_NAME,
-        neonRole: process.env.NEON_ROLE,
-        gitBranch: process.env.GIT_BRANCH
-      }
-    },
-  };
+// src/index.js
+const express = require('express');
+const { Pool } = require('pg');
+const app = express();
+const port = process.env.PORT || 1337;  // Puerto predeterminado de Strapi
+
+// Conexión a la base de datos PostgreSQL
+const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+
+app.use(express.json());
+
+app.get('/', async (req, res) => {
+  try {
+    const { rows } = await pool.query('SELECT * FROM books_to_read;');
+    res.json(rows);
+  } catch (error) {
+    console.error('Failed to fetch books', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Server running on https://mercadocomic-backend.onrender.com`);
+});
