@@ -2,7 +2,7 @@
 const express = require('express');
 const { Pool } = require('pg');
 const app = express();
-const port = process.env.PORT || 1337;  // Puerto predeterminado de Strapi
+const port = process.env.PORT || 3000;  // Puerto predeterminado de Strapi
 
 // Conexión a la base de datos PostgreSQL
 const pool = new Pool({ connectionString: process.env.DATABASE_URL });
