@@ -6,15 +6,15 @@ export default ({ env }) => {
   const connections = {
     postgres: {
       connection: {
-        connectionString: env('DATABASE_URL'), // Esto se leerá del archivo .env
-        host: env('DATABASE_HOST', 'localhost'),
+        connectionString: env('DATABASE_URL'),
+        host: env('DATABASE_HOST', 'ep-gentle-rain-a8pwl5sc-pooler.eastus2.azure.neon.tech'),
         port: env.int('DATABASE_PORT', 5432),
-        database: env('DATABASE_NAME', 'ecommerce_comic'),
-        user: env('DATABASE_USERNAME', 'strapi'),
-        password: env('DATABASE_PASSWORD', 'postgres'),
-        ssl: {
-          rejectUnauthorized: false,  // Aquí estamos permitiendo conexiones SSL sin validar estrictamente el certificado
-        },
+        database: env('DATABASE_NAME', 'neondb'),
+        user: env('DATABASE_USERNAME', 'neondb_owner'),
+        password: env('DATABASE_PASSWORD', 'Ky4wfNzA6Hge'),
+        ssl: env.bool('DATABASE_SSL', true) ? {
+          rejectUnauthorized: false,
+        } : false,
       },
       pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
     },
