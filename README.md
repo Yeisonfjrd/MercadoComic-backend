@@ -4,6 +4,7 @@
 
 ```mermaid
 graph LR
+
     subgraph Raíz del Proyecto
         direction TB
         rootFolder("MercadoComic-backend")
@@ -31,14 +32,14 @@ graph LR
             style serverJs fill:#e0ffe0,stroke:#333,stroke-width:0.5px
             configFolder --> databaseJs
             configFolder --> serverJs
-             note over configFolder: Configuración Strapi
+            note right of configFolder: Configuración Strapi
         end
 
         subgraph Carpeta data
             direction TB
             dataFolder("data")
             style dataFolder fill:#e0e0e0,stroke:#333,stroke-width:1px
-             note over dataFolder: Datos iniciales (opcional)
+            note over dataFolder: Datos iniciales (opcional)
         end
 
         subgraph Carpeta database
@@ -51,7 +52,7 @@ graph LR
             style migrationFiles fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
             databaseFolder --> migrationsFolder
             migrationsFolder --> migrationFiles
-             note over databaseFolder: Configuración Base de Datos
+            note right of databaseFolder: Configuración Base de Datos
         end
 
         subgraph Carpeta public
@@ -61,14 +62,14 @@ graph LR
             faviconPng("public/\nfavicon.png")
             style faviconPng fill:#e0ffe0,stroke:#333,stroke-width:0.5px
             publicFolder --> faviconPng
-             note over publicFolder: Archivos estáticos
+            note right of publicFolder: Archivos estáticos
         end
 
         subgraph Carpeta scripts
             direction TB
             scriptsFolder("scripts")
             style scriptsFolder fill:#e0e0e0,stroke:#333,stroke-width:1px
-             note over scriptsFolder: Scripts personalizados (opcional)
+            note over scriptsFolder: Scripts personalizados (opcional)
         end
 
         subgraph Carpeta src
@@ -80,7 +81,7 @@ graph LR
                 direction TB
                 apiFolder("api")
                 style apiFolder fill:#d0f0d0,stroke:#333,stroke-width:1px
-                 note over apiFolder: Lógica API Strapi
+                note over apiFolder: Lógica API Strapi
                 apiEntitiesFolder("api/\n...\n(Entidades)")
                 style apiEntitiesFolder fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
                 apiControllersFolder("api/\n...\n(Controladores)")
@@ -109,8 +110,8 @@ graph LR
                 direction TB
                 pluginsFolder("plugins")
                 style pluginsFolder fill:#d0f0d0,stroke:#333,stroke-width:1px
-                 note over pluginsFolder: Plugins Strapi\n(personalizaciones)
-                 pluginFilesSrc("...\n(Archivos de Plugins)")
+                note over pluginsFolder: Plugins Strapi\n(personalizaciones)
+                pluginFilesSrc("...\n(Archivos de Plugins)")
                 style pluginFilesSrc fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
                 pluginsFolder --> pluginFilesSrc
             end
@@ -125,13 +126,10 @@ graph LR
                 adminFolder --> adminFilesSrc
             end
 
-
             srcFolder --> apiFolder
             srcFolder --> componentsFolder
             srcFolder --> pluginsFolder
             srcFolder --> adminFolder
-
-
         end
 
         subgraph Carpeta types
@@ -144,9 +142,8 @@ graph LR
             style generatedTypes fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
             typesFolder --> generatedFolder
             generatedFolder --> generatedTypes
-             note over typesFolder: Definiciones de tipos
+            note right of typesFolder: Definiciones de tipos
         end
-
 
         envExampleFile(".env.example")
         style envExampleFile fill:#f9f,stroke:#333,stroke-width:1px
@@ -163,7 +160,6 @@ graph LR
         tsConfigJsonFile("tsconfig.json")
         style tsConfigJsonFile fill:#f9f,stroke:#333,stroke-width:1px
 
-
         rootFolder --> githubFolder
         rootFolder --> configFolder
         rootFolder --> dataFolder
@@ -179,5 +175,25 @@ graph LR
         rootFolder --> packageLockJsonFile
         rootFolder --> packageJsonFile
         rootFolder --> tsConfigJsonFile
-
     end
+
+## Sobre el Proyecto
+
+Mercado Comic es un proyecto backend para administrar y ofrecer cómics de Marvel, DC, y Star Wars a los usuarios. Este backend está construido con **Strapi** como CMS y se integra con una base de datos PostgreSQL para almacenar la información.
+
+🔗 [Ver Proyecto en GitHub](https://github.com/usuario/MercadoComic-backend)
+
+## Tecnologías Usadas
+
+- **Framework:** Strapi
+- **Base de Datos:** PostgreSQL
+- **Lenguaje:** JavaScript/TypeScript
+- **Gestión de Dependencias:** npm
+
+## Instalación y Uso
+
+Para ejecutar este proyecto en tu máquina local:
+
+```bash
+npm install  # Instalar dependencias
+npm run develop  # Ejecutar en modo desarrollo
