@@ -10,7 +10,6 @@ graph LR
         direction TB
         rootFolder("MercadoComic-backend")
         style rootFolder fill:#f0f0f0,stroke:#333,stroke-width:2px
-
         subgraph Carpeta .github
             direction TB
             githubFolder(".github")
@@ -167,7 +166,6 @@ graph LR
         rootFolder --> packageJsonFile
         rootFolder --> tsConfigJsonFile
     end
-```mermaid
 
 ## Tecnologías Usadas
 
