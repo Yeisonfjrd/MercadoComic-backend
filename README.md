@@ -1,6 +1,6 @@
 # Backend Mercado Comic
 
-[![project](https://github.com/user-attachments/assets/4ad0368a-e266-4a93-b135-07b65f9d493b)](https://mercadocomic.com/)
+[![project](https://github.com/user-attachments/assets/c903bb27-a7db-415b-94f9-af16d8c6f0bb)](https://mercadocomic.com/)
 
 ## Diagrama de Arquitectura del Backend Mercado Comic
 
