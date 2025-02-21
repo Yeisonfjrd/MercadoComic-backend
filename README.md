@@ -167,6 +167,7 @@ graph LR
         rootFolder --> packageJsonFile
         rootFolder --> tsConfigJsonFile
     end
+```mermaid
 
 ## Tecnologías Usadas
 
@@ -180,12 +181,12 @@ graph LR
 Para ejecutar este proyecto en tu máquina local:
 
 \`\`\`bash
-npm install  # Instalar dependencias
-npm run dev  # Ejecutar en modo desarrollo
+npm install  # Instalar dependencias
+npm run dev  # Ejecutar en modo desarrollo
 \`\`\`
 
 ## Contacto
 
-📌 [LinkedIn](https://www.linkedin.com/in/yeisonfajardo)  
+📌 [LinkedIn](https://www.linkedin.com/in/yeison-fajardo)  
 📌 [GitHub](https://github.com/yeisonfjrd)
 """
