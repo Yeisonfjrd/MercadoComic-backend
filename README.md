@@ -1,12 +1,10 @@
-# Creando el archivo con la documentación en formato Markdown como se solicitó
-documentacion = """
 # Backend Mercado Comic
 
 [![project](https://github.com/user-attachments/assets/4ad0368a-e266-4a93-b135-07b65f9d493b)](https://mercadocomic.com/)
 
 ## Diagrama de Arquitectura del Backend Mercado Comic
 
-\`\`\`mermaid
+```mermaid
 graph LR
     subgraph Raíz del Proyecto
         direction TB
@@ -17,9 +15,9 @@ graph LR
             direction TB
             githubFolder(".github")
             style githubFolder fill:#e0e0e0,stroke:#333,stroke-width:1px
-            workflowsFolder(".github/\nworkflows")
+            workflowsFolder(".github/workflows")
             style workflowsFolder fill:#d0e0d0,stroke:#333,stroke-width:1px
-            ciWorkflow(".github/workflows/\nci.yml\n(Ejemplo Workflow CI)")
+            ciWorkflow(".github/workflows/ci.yml\n(Ejemplo Workflow CI)")
             style ciWorkflow fill:#e0ffe0,stroke:#333,stroke-width:0.5px
             githubFolder --> workflowsFolder
             workflowsFolder --> ciWorkflow
@@ -29,9 +27,9 @@ graph LR
             direction TB
             configFolder("config")
             style configFolder fill:#e0e0e0,stroke:#333,stroke-width:1px
-            databaseJs("config/\ndatabase.js\n(Configuración DB)")
+            databaseJs("config/database.js\n(Configuración DB)")
             style databaseJs fill:#e0ffe0,stroke:#333,stroke-width:0.5px
-            serverJs("config/\nserver.js\n(Configuración Servidor)")
+            serverJs("config/server.js\n(Configuración Servidor)")
             style serverJs fill:#e0ffe0,stroke:#333,stroke-width:0.5px
             configFolder --> databaseJs
             configFolder --> serverJs
@@ -47,7 +45,7 @@ graph LR
             direction TB
             databaseFolder("database")
             style databaseFolder fill:#e0e0e0,stroke:#333,stroke-width:1px
-            migrationsFolder("database/\nmigrations")
+            migrationsFolder("database/migrations")
             style migrationsFolder fill:#d0e0d0,stroke:#333,stroke-width:1px
             migrationFiles("...")
             style migrationFiles fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
@@ -59,7 +57,7 @@ graph LR
             direction TB
             publicFolder("public")
             style publicFolder fill:#e0e0e0,stroke:#333,stroke-width:1px
-            faviconPng("public/\nfavicon.png")
+            faviconPng("public/favicon.png")
             style faviconPng fill:#e0ffe0,stroke:#333,stroke-width:0.5px
             publicFolder --> faviconPng
         end
@@ -79,13 +77,13 @@ graph LR
                 direction TB
                 apiFolder("api")
                 style apiFolder fill:#d0f0d0,stroke:#333,stroke-width:1px
-                apiEntitiesFolder("api/\n...\n(Entidades)")
+                apiEntitiesFolder("api/... (Entidades)")
                 style apiEntitiesFolder fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
-                apiControllersFolder("api/\n...\n(Controladores)")
+                apiControllersFolder("api/... (Controladores)")
                 style apiControllersFolder fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
-                apiServicesFolder("api/\n...\n(Servicios)")
+                apiServicesFolder("api/... (Servicios)")
                 style apiServicesFolder fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
-                apiRoutesFolder("api/\n...\n(Rutas)")
+                apiRoutesFolder("api/... (Rutas)")
                 style apiRoutesFolder fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
                 apiFolder --> apiEntitiesFolder
                 apiFolder --> apiControllersFolder
@@ -97,7 +95,7 @@ graph LR
                 direction TB
                 componentsFolder("components")
                 style componentsFolder fill:#d0f0d0,stroke:#333,stroke-width:1px
-                componentFilesSrc("...\n(Archivos de Componentes)")
+                componentFilesSrc("... (Archivos de Componentes)")
                 style componentFilesSrc fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
                 componentsFolder --> componentFilesSrc
             end
@@ -106,7 +104,7 @@ graph LR
                 direction TB
                 pluginsFolder("plugins")
                 style pluginsFolder fill:#d0f0d0,stroke:#333,stroke-width:1px
-                pluginFilesSrc("...\n(Archivos de Plugins)")
+                pluginFilesSrc("... (Archivos de Plugins)")
                 style pluginFilesSrc fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
                 pluginsFolder --> pluginFilesSrc
             end
@@ -115,7 +113,7 @@ graph LR
                 direction TB
                 adminFolder("admin")
                 style adminFolder fill:#d0f0d0,stroke:#333,stroke-width:1px
-                adminFilesSrc("...\n(Archivos del Admin)")
+                adminFilesSrc("... (Archivos del Admin)")
                 style adminFilesSrc fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
                 adminFolder --> adminFilesSrc
             end
@@ -130,9 +128,9 @@ graph LR
             direction TB
             typesFolder("types")
             style typesFolder fill:#e0e0e0,stroke:#333,stroke-width:1px
-            generatedFolder("types/\ngenerated")
+            generatedFolder("types/generated")
             style generatedFolder fill:#d0e0d0,stroke:#333,stroke-width:1px
-            generatedTypes("types/generated\n/...\n(Tipos generados)")
+            generatedTypes("types/generated/... (Tipos generados)")
             style generatedTypes fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
             typesFolder --> generatedFolder
             generatedFolder --> generatedTypes
@@ -169,6 +167,7 @@ graph LR
         rootFolder --> packageJsonFile
         rootFolder --> tsConfigJsonFile
     end
+
 \`\`\`
 
 ## Sobre Mí
