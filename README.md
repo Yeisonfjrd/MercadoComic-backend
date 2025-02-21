@@ -168,12 +168,6 @@ graph LR
         rootFolder --> tsConfigJsonFile
     end
 
-\`\`\`
-
-## Sobre Mí
-
-Soy un desarrollador backend, con experiencia en la creación de aplicaciones escalables usando tecnologías modernas. Mi objetivo es crear soluciones robustas para el manejo de datos y la implementación de API eficientes.
-
 ## Tecnologías Usadas
 
 - **Backend Framework:** Strapi
