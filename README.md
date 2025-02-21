@@ -1,10 +1,13 @@
+# Creando el archivo con la documentación en formato Markdown como se solicitó
+documentacion = """
 # Backend Mercado Comic
 
-## Diagrama de Arquitectura del Backend Mercado Comic (Estilizado)
+[![project](https://github.com/user-attachments/assets/4ad0368a-e266-4a93-b135-07b65f9d493b)](https://mercadocomic.com/)
 
-```mermaid
+## Diagrama de Arquitectura del Backend Mercado Comic
+
+\`\`\`mermaid
 graph LR
-
     subgraph Raíz del Proyecto
         direction TB
         rootFolder("MercadoComic-backend")
@@ -32,14 +35,12 @@ graph LR
             style serverJs fill:#e0ffe0,stroke:#333,stroke-width:0.5px
             configFolder --> databaseJs
             configFolder --> serverJs
-            note right of configFolder: Configuración Strapi
         end
 
         subgraph Carpeta data
             direction TB
             dataFolder("data")
             style dataFolder fill:#e0e0e0,stroke:#333,stroke-width:1px
-            note over dataFolder: Datos iniciales (opcional)
         end
 
         subgraph Carpeta database
@@ -52,7 +53,6 @@ graph LR
             style migrationFiles fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
             databaseFolder --> migrationsFolder
             migrationsFolder --> migrationFiles
-            note right of databaseFolder: Configuración Base de Datos
         end
 
         subgraph Carpeta public
@@ -62,14 +62,12 @@ graph LR
             faviconPng("public/\nfavicon.png")
             style faviconPng fill:#e0ffe0,stroke:#333,stroke-width:0.5px
             publicFolder --> faviconPng
-            note right of publicFolder: Archivos estáticos
         end
 
         subgraph Carpeta scripts
             direction TB
             scriptsFolder("scripts")
             style scriptsFolder fill:#e0e0e0,stroke:#333,stroke-width:1px
-            note over scriptsFolder: Scripts personalizados (opcional)
         end
 
         subgraph Carpeta src
@@ -81,7 +79,6 @@ graph LR
                 direction TB
                 apiFolder("api")
                 style apiFolder fill:#d0f0d0,stroke:#333,stroke-width:1px
-                note over apiFolder: Lógica API Strapi
                 apiEntitiesFolder("api/\n...\n(Entidades)")
                 style apiEntitiesFolder fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
                 apiControllersFolder("api/\n...\n(Controladores)")
@@ -100,7 +97,6 @@ graph LR
                 direction TB
                 componentsFolder("components")
                 style componentsFolder fill:#d0f0d0,stroke:#333,stroke-width:1px
-                note over componentsFolder: Componentes Strapi\n(reutilizables en el admin)
                 componentFilesSrc("...\n(Archivos de Componentes)")
                 style componentFilesSrc fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
                 componentsFolder --> componentFilesSrc
@@ -110,7 +106,6 @@ graph LR
                 direction TB
                 pluginsFolder("plugins")
                 style pluginsFolder fill:#d0f0d0,stroke:#333,stroke-width:1px
-                note over pluginsFolder: Plugins Strapi\n(personalizaciones)
                 pluginFilesSrc("...\n(Archivos de Plugins)")
                 style pluginFilesSrc fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
                 pluginsFolder --> pluginFilesSrc
@@ -120,7 +115,6 @@ graph LR
                 direction TB
                 adminFolder("admin")
                 style adminFolder fill:#d0f0d0,stroke:#333,stroke-width:1px
-                note over adminFolder: Personalización\ndel panel de administración
                 adminFilesSrc("...\n(Archivos del Admin)")
                 style adminFilesSrc fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
                 adminFolder --> adminFilesSrc
@@ -142,7 +136,6 @@ graph LR
             style generatedTypes fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
             typesFolder --> generatedFolder
             generatedFolder --> generatedTypes
-            note right of typesFolder: Definiciones de tipos
         end
 
         envExampleFile(".env.example")
@@ -176,24 +169,30 @@ graph LR
         rootFolder --> packageJsonFile
         rootFolder --> tsConfigJsonFile
     end
+\`\`\`
 
-## Sobre el Proyecto
+## Sobre Mí
 
-Mercado Comic es un proyecto backend para administrar y ofrecer cómics de Marvel, DC, y Star Wars a los usuarios. Este backend está construido con **Strapi** como CMS y se integra con una base de datos PostgreSQL para almacenar la información.
-
-🔗 [Ver Proyecto en GitHub](https://github.com/usuario/MercadoComic-backend)
+Soy un desarrollador backend, con experiencia en la creación de aplicaciones escalables usando tecnologías modernas. Mi objetivo es crear soluciones robustas para el manejo de datos y la implementación de API eficientes.
 
 ## Tecnologías Usadas
 
-- **Framework:** Strapi
+- **Backend Framework:** Strapi
 - **Base de Datos:** PostgreSQL
-- **Lenguaje:** JavaScript/TypeScript
+- **Lenguaje:** JavaScript
 - **Gestión de Dependencias:** npm
 
 ## Instalación y Uso
 
 Para ejecutar este proyecto en tu máquina local:
 
-```bash
+\`\`\`bash
 npm install  # Instalar dependencias
-npm run develop  # Ejecutar en modo desarrollo
+npm run dev  # Ejecutar en modo desarrollo
+\`\`\`
+
+## Contacto
+
+📌 [LinkedIn](https://www.linkedin.com/in/yeisonfajardo)  
+📌 [GitHub](https://github.com/yeisonfjrd)
+"""
