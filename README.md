@@ -122,50 +122,8 @@ graph LR
             srcFolder --> pluginsFolder
             srcFolder --> adminFolder
         end
-
-        subgraph Carpeta types
-            direction TB
-            typesFolder("types")
-            style typesFolder fill:#e0e0e0,stroke:#333,stroke-width:1px
-            generatedFolder("types/generated")
-            style generatedFolder fill:#d0e0d0,stroke:#333,stroke-width:1px
-            generatedTypes("types/generated/... (Tipos generados)")
-            style generatedTypes fill:#e0ffe0,stroke:#333,stroke-width:0.5px, dasharray: 3 3
-            typesFolder --> generatedFolder
-            generatedFolder --> generatedTypes
-        end
-
-        envExampleFile(".env.example")
-        style envExampleFile fill:#f9f,stroke:#333,stroke-width:1px
-        gitignoreFile(".gitignore")
-        style gitignoreFile fill:#f9f,stroke:#333,stroke-width:1px
-        readmeFile("README.md")
-        style readmeFile fill:#f9f,stroke:#333,stroke-width:1px
-        datapgHbaConfFile("datapg_hba.conf")
-        style datapgHbaConfFile fill:#f9f,stroke:#333,stroke-width:1px
-        packageLockJsonFile("package-lock.json")
-        style packageLockJsonFile fill:#f9f,stroke:#333,stroke-width:1px
-        packageJsonFile("package.json")
-        style packageJsonFile fill:#f9f,stroke:#333,stroke-width:1px
-        tsConfigJsonFile("tsconfig.json")
-        style tsConfigJsonFile fill:#f9f,stroke:#333,stroke-width:1px
-
-        rootFolder --> githubFolder
-        rootFolder --> configFolder
-        rootFolder --> dataFolder
-        rootFolder --> databaseFolder
-        rootFolder --> publicFolder
-        rootFolder --> scriptsFolder
-        rootFolder --> srcFolder
-        rootFolder --> typesFolder
-        rootFolder --> envExampleFile
-        rootFolder --> gitignoreFile
-        rootFolder --> readmeFile
-        rootFolder --> datapgHbaConfFile
-        rootFolder --> packageLockJsonFile
-        rootFolder --> packageJsonFile
-        rootFolder --> tsConfigJsonFile
     end
+```
 
 ## Tecnologías Usadas
 
@@ -178,13 +136,12 @@ graph LR
 
 Para ejecutar este proyecto en tu máquina local:
 
-\`\`\`bash
-npm install  # Instalar dependencias
-npm run dev  # Ejecutar en modo desarrollo
-\`\`\`
+```bash
+npm install  # Instalar dependencias
+npm run dev  # Ejecutar en modo desarrollo
+```
 
 ## Contacto
 
-📌 [LinkedIn](https://www.linkedin.com/in/yeison-fajardo)  
+📌 [LinkedIn](https://www.linkedin.com/in/yeison-fajardo)  
 📌 [GitHub](https://github.com/yeisonfjrd)
-"""
